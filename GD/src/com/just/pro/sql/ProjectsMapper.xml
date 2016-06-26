@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <mapper namespace="com.just.pro.dao.ProjectsMapperDao">
+ 	<!-- 查找所有数据 -->
+ 	<select id="loadAllProjects"  resultType="com.just.pro.bean.Project" parameterType="com.just.pro.bean.DataFromWeb">
+ 		select 	p.pro_id,
+				p.pro_title,
+				p.pro_desc,
+				p.pro_status,
+				u.NAME pro_teacher 
+		from project p,user u  
+		where p.pro_teacher = u.id and
+ 		<if test="keywords == '全部'">
+		 	1
+		 </if>
+		 <if test="keywords != '全部'">
+			 p.pro_title like concat(concat('%',#{keywords},'%'))
+		 </if>
+ 		LIMIT #{beginNumber},20
+ 	</select>
+
+ 	<!-- 查找对应关键字的条数 -->
+ 	<select id="findKeywordsNumber" resultType="Integer" parameterType="com.just.pro.bean.DataFromWeb">
+ 		select count(pro_title) from project where
+		 <if test='keywords == "全部"'>
+		 	1
+		 </if>
+		 <if test="keywords != '全部'">
+			 pro_title like concat(concat('%',#{keywords},'%'))
+		 </if>
+ 	</select>
+ 	<!-- 删除课题 -->
+ 	<delete id="deleteProject" parameterType="Integer">
+ 		delete from project where pro_id=#{id}
+ 	</delete>
+ 	<!-- 更新用户表与课题表 -->
+ 	<update id="updateProject"   parameterType="Integer" >
+ 		update project set pro_status=1 where pro_id=#{selectedId}
+ 	</update>
+ </mapper>

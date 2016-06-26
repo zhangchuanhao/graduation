@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>pwdwindow.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <div class="pwdwindow">
+    	<table>
+			<tr>
+				<td colspan="2"><input type="text" placeholder="初始密码"/></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="text" placeholder="新的密码"/></td>
+			</tr>			
+			<tr>
+				<td colspan="2"><input type="text" placeholder="确认密码"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="确认修改" class="ok"/></td>
+				<td><input type="button" value="取消修改" class="cancel"/></td>
+			</tr>		
+		</table>
+		<script type="text/javascript">
+			$(function(){
+				$(".cancle").click(function(){
+					alert("123");
+					$("#cpwddiv").empty();
+				});
+			});
+		</script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" href="styles/login.css"/> -->
+
+
+	<link rel="stylesheet" href="styles/projectsList.css" />
+	<script type="text/javascript" src="scripts/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/projectsList.js"></script>
+	<script type="text/javascript" src="scripts/cookie_util.js"></script>
+<title>选题系统</title>
+</head>
+<body id="bg">
+<div id="body">
+	<div id="cpwddiv">
+	</div>
+	<div id="log">
+		<img alt="江苏科技大学图标" src="images/log.png"">
+	</div>
+	<div id="data">
+	<!-- 导航菜单 -->
+    <div id="navigator">
+	   <table id="navtable">
+	       <tr><td>1</td></tr>
+	       <tr><td>学生选题</td></tr>
+	       <tr><td>学生申报课题</td></tr>
+	       <tr><td>查看任务书</td></tr>
+	       <tr><td>开题报告</td></tr>
+	       <tr><td>中期检查</td></tr>
+	       <tr><td><a href="javascript:;" id="cpwd">更改密码</a></td></tr>
+	       <tr><td>1</td></tr>
+	       <tr><td>1</td></tr>
+	       <tr><td>1</td></tr><tr><td>1</td></tr>
+	       
+	   </table>
+	</div>
+	<div id="pros">
+		<!--查询区域-->
+		<div class="search_submit">
+			<div id="keyword">
+				课题偏向: 
+				<select id="selModules" class="select_search">
+					<option selected="selected">全部</option>
+					<option>web</option>
+					<option>.NET</option>
+					<option>java</option>
+					<option>嵌入式</option>
+				</select>
+				<input type="button" value="查询" class="btn_search" id="btn_search"/>
+				<input type="button" value="提交" class="btn_submit" id="btn_submit"/>
+			</div>
+		</div>
+		<table id="proTable">
+			<thead>
+				<tr>
+					<th>选择</th>
+					<th>序号</th>
+					<th>课题名称</th>
+					<th>课程描述</th>
+					<th>指导老师</th>
+					<th>课题操作     </th>
+				</tr>
+			</thead>
+			<tbody id="tb1">
+			</tbody>
+		</table>
+		<!--分页-->
+	    <div id="pages">
+	    </div>  
+	</div>
+	</div>
+ 	<!--主要区域结束-->
+    <div id="footer">
+    	<p>[基于web的毕业设计选题系统设计与实现]</p>
+    	<p>课题性质：E 课题类型：D 指导老师：白素琴   技术职务：副教授</p>
+    	<p>版权所有(C)备注：E)模拟性课题;D)计算机软件设计 </p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+@CHARSET "UTF-8";
+/*背景*/
+#body{
+	display:none;
+}
+body {
+	font-size: 12px;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+#bg {
+	background-color: #00629F;
+	position: absolute;
+	width: 100%;
+}
+
+div {
+	display: block;
+}
+/*图标*/
+#log {
+	margin-left: 25%;
+}
+
+#log img {
+	width: 10%;
+	height: 100%;
+}
+
+/*数据显示模块*/
+#navigator{
+	float: left;
+	margin-left:20%;
+}
+#navtable{
+	border: 1px solid black;
+    border-collapse: collapse;
+    width: 80px;
+    background: #C7E1FC;
+}
+#navtable td{
+	color:#31589D;
+	height:25px;
+	text-align: center;
+    border: 1px solid #83ADDF;
+}
+#pros {
+	max-height: 70%;
+	width: 50%;
+	padding: 5px;
+	/*
+	margin-top: 50px;
+	*/
+	margin-left: 25%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	background: #E8F3F8;
+}
+/*表格*/
+#proTable {
+	margin: 80px auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+	width: 95%;
+	background-color: #fff;
+	border-radius: 5px;
+	/*百分比表格长度为可变*/
+	height: 60%;
+}
+
+#proTable th {
+	height: 30px;
+	background-color: #FBEDCE;
+}
+
+#proTable td,#proTable th {
+	text-align: center;
+	border: 1px solid #CCCCCC;
+}
+
+#proTable td {
+	height: 20px;
+}
+/*搜索和添加区域*/
+div.search_submit div {
+	float: left;
+	margin-right: 18px;
+	line-height: 23px;
+}
+
+div.search_submit {
+	width: 910px;
+	height: 30px;
+	text-align: right;
+	margin-top: 3px;
+}
+
+a {
+	text-decoration: none;
+}
+/*按钮样式*/
+button {
+	margin: 0 auto;
+}
+
+#btnEdit {
+	width: 50px;
+	height: 30px;
+}
+input.btn_submit{
+	margin-left:80px;
+}
+input.btn_search {
+	line-height: 26px;
+	padding-left: 13px;
+	margin-left: 3px;
+}
+/*分页*/
+#pages {
+	width: 100%;
+	text-align: center;
+	height: 28px;
+	line-height: 28px;
+	margin-top: 5px;
+}
+
+#pages a {
+	color: #000;
+}
+
+#pages a,#pages a.current_page:hover {
+	padding: 5px 10px;
+}
+
+#pages a.current_page {
+	background: #FFF;
+	border: #89bdd8 solid 1px;
+	color: #067db5;
+}
+
+#pages a:hover{
+	border: #89bdd8 solid 1px;
+	background: #cddde4;
+	padding: 4px 9px;
+	cursor: pointer;
+}
+/*页脚部分：footer*/
+p,div {
+	margin: 0px auto;
+	padding: 0px;
+	border: 0;
+}
+
+#footer {
+	color: #FFF;
+	width: 100%;
+	height: 50px;
+	padding: 5px 0;
+	line-height: 25px;
+	text-align: center;
+}
+/*删除修改按钮样式*/
+input.btn_modify, input.btn_delete, input.btn_start, input.btn_pause
+{
+    margin-left: 3px;
+    width: 55px;
+    cursor: pointer;
+}
+input.btn_modify,input.btn_modify:hover
+{
+    background: url(../images/modification.png) no-repeat left center;
+    color: #000;
+    border:0;
+    outline: 0;
+}
+input.btn_delete,input.btn_delete:hover
+{
+    background: url(../images/delete.png) no-repeat left center;
+    color: #000;
+    border:0;
+    outline: 0;
+}
+/*Toast*/
+toast {
+	position: absolute; 
+	top:0; 
+	z-index:99; 
+	left:auto;
+	background-color:black;
+	color:white; 
+	font-size:18px;
+	padding:10px;
+	margin:10px,
+}
+#cpwddiv{
+	margin-left:45%;
+	margin-top:85px;
+	position:fixed;
+	z-index:999;
+	background: #000;
+	width:200px;
+	text-align: center;
+}
+.ok,.cancel{
+	width:70px;
+}
