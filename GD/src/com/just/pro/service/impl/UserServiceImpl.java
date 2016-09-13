@@ -9,9 +9,9 @@ import com.just.pro.bean.User;
 import com.just.pro.dao.UserMapperDao;
 import com.just.pro.service.UserService;
 
-@Service("userService")//扫描
+@Service("userService")//鎵弿
 public class UserServiceImpl implements UserService{
-	@Resource//注入
+	@Resource//娉ㄥ叆
 	private UserMapperDao userDao;
 	
 	public NoteResult checkLogin(String name, String password) {
@@ -19,21 +19,22 @@ public class UserServiceImpl implements UserService{
 		User user = userDao.findById(name);
 		if(user==null){
 			result.setStatus(1);
-			result.setMsg("账号不存在");
+			result.setMsg("璐﹀彿涓嶅瓨鍦�);
 			return result;
 		}
-		//将用户输入的密码加密处理
+		//灏嗙敤鎴疯緭鍏ョ殑瀵嗙爜鍔犲瘑澶勭悊
 //		String md5_pwd = NoteUtil.md5(password);
-		//将加密后的密码和数据库中加密的结果对比
+		//灏嗗姞瀵嗗悗鐨勫瘑鐮佸拰鏁版嵁搴撲腑鍔犲瘑鐨勭粨鏋滃姣�
 		if(!user.getPassword().equals(password)){
 			result.setStatus(2);
-			result.setMsg("密码不正确");
+			result.setMsg("瀵嗙爜涓嶆纭�);
 			return result;
 		}
 		
 		result.setStatus(0);
 		result.setData(name);
-		result.setMsg("登陆成功");
+		result.setMsg("鐧婚檰鎴愬姛");
+		System.out.println();
 		return result;
 	}
 	public boolean checkRegister(User user) {
